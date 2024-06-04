@@ -1,0 +1,26 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main(){
+    int nom[] = {500, 200, 100, 50, 20, 10, 5, 2, 1};
+    int kwota;
+    int ile;
+    cout << "Podaj kwote: ";
+    cin >> kwota;
+
+    while (kwota > 0){
+        for(int i: nom){
+            if(i <= kwota){
+                cout << i << endl;
+                kwota -= i;
+                break;
+
+        
+            }
+            if(i > kwota){
+                continue;
+            }
+        }
+    }
+}
